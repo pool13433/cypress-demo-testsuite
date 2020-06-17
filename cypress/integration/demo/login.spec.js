@@ -1,13 +1,12 @@
-
-
-
 describe('test login', () => {
   it('visit and enter login data', () => {
-      cy.visit('/login.html')
-        .get('#username').type('admin')
-        .get('#password').type('1234')
+      cy
+        .viewport(500,500)
+        .visit('/login.html')
+        .get('#username').type('admin').blur({ force: true })
+        .get('#password').type('1234').focus().blur()  
   });
-  it('', () => {
-    
+  it('should be submit form', () => {
+      //cy.get('#login').submit()
   });
 });

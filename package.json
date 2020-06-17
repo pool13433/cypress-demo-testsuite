@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cp:open" : "cypress open",
-    "cp:run" : "cypress run"
+    "cp:open": "cypress open",
+    "cp:run": "cypress run"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^4.1.0"
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^4.4.1"
   }
 }
