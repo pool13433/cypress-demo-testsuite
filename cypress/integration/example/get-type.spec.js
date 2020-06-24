@@ -1,4 +1,4 @@
-describe('ทดสอบการใช้งานร่วมกันของ command ต่าง ๆ', () => {
+describe('ตัวอย่างโค๊ดการ ทดสอบการใช้งานร่วมกันของ command ต่าง ๆ', () => {
   it('ใส่คำอธิบายสั้น ๆ ของ testcase ที่ 1', () => {
     cy.visit('/register.html')   
     .get('#firstName').type('poolsawat')

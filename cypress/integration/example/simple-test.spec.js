@@ -1,4 +1,4 @@
-describe('simple test script',()=>{
+describe('ตัวอย่างโค๊ดการ simple test script',()=>{
 	const keyword = 'poolsawat.com'
 	it('visit google website & search poolsawat.com',()=>{
     		cy.visit('https://www.google.com/')

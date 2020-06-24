@@ -1,20 +1,22 @@
 /*
-1. เพิ่ม testscript ด้านล่างนี้
-2. คิด scenario testcase flow 3-4 step ของระบบอะไรก็ได้ 
-    หรือ จะไช้ https://cypress-testing-143fd.web.app/
-3. ใช้ describe ,it ,visit ,get ,click , type ,expect/should
-เช่น cy.visit(‘<url>’).get(‘<element>’).type(‘<value>’).get(‘<button/link>’).click().get(‘<labe>’).contains(‘<content text>’)
+1. แก้ไขไฟล์ exercise3.spec.js
+2. เขียน testscript capture screen หน้าจอ ตาม tabs ทั้งหมด ประกอบไปด้วย index ,register ,register ,Rregister list ,window ,...
+3. หน้า /window.html ต้องการให้ capture screen ส่วนของปุ่ม “Window Alert และ Window Confirm” เท่านั้น ตามภาพ
 */
 
-describe('ตั้งชื่อกลุ่ม testcase ของคุณที่นี้', () => {
-  it('ใส่คำอธิบายสั้น ๆ ของ testcase ที่ 1', () => {
+describe('เขียน testscript capture screen หน้าจอ', () => {
+    it('screencapture page /index.html', () => {
+        cy.visit('/').screenshot('index-html')
+    });
+    it('screencapture page /register.html', () => {
+        // เพิ่ม screencapture page /register.html  ที่นี่
+    });
 
-    // cy.visit('')
-    // เพิ่มโค๊ดของคุณที่นี่
-  })
-  it('ใส่คำอธิบายสั้น ๆ ของ testcase ที่ 2', () => {
+    // เพิ่ม it screencapture page อื่น ๆ  ที่นี่
 
-    
+    it('capture screen ส่วนของปุ่ม “Window Alert และ Window Confirm” เท่านั้น', () => {
+        cy.visit('/window.html')
+        // เพิ่มโค๊ดของคุณที่นี่
+    });
 
-  })
-})
+});

@@ -1,4 +1,4 @@
-describe('API Commands Examples', () => {
+describe('ตัวอย่างโค๊ดการ API Commands Examples', () => {
   
   // API Command as & check
 	it.skip('(as,check)', () => {

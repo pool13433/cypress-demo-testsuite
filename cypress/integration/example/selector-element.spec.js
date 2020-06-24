@@ -1,4 +1,4 @@
-describe('แสดง Testscript การ Selector DOM Element ด้วยวิธีการต่าง ๆ', () => {
+describe('ตัวอย่างโค๊ดการ Testscript การ Selector DOM Element ด้วยวิธีการต่าง ๆ', () => {
   it('selector by ID=>#', () => {
     cy.visit('/register.html')
     .get('#firstName').type('firstName')
