@@ -1,3 +1,6 @@
 [
-  {"firstName" : "Poolsawat","lastName" : "Apin","age" : 20,"email" : "poolsawat","gender" : "F"}
+  {"firstName" : "Poolsawat","lastName" : "Apin","age" : 20,"email" : "poolsawat","gender" : "F"},
+  {"firstName" : "Birth","lastName" : "Tongchai","age" : 25,"email" : "birth@gmail.com","gender" : "F"},
+  {"firstName" : "Nick","lastName" : "ChickChick","age" : 30,"email" : "nick@gmail.com","gender" : "M"},
+  {"firstName" : "Poom","lastName" : "Chisiri","age" : 48,"email" : "poom@gmail.com","gender" : "M"}
 ]
