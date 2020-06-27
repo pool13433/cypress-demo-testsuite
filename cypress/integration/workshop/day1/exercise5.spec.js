@@ -6,11 +6,19 @@
 describe('เขียน testscript ตรวจจับเงื่อนไขของ เหตุการณ์ต่าง (Events)', () => {
     it('ค้นหา ตรวจสอบเคส จำนวนการ click alert จากหน้าจอ', () => {
         let countAlert = 0
+        //countAlert++
+        //countAlert += 1
         cy.visit('/window.html')
         cy.on('window:alert', () => {
             // เพิ่มโค๊ดของคุณที่นี่
+            console.log('time '+Date().toString())
+            countAlert++
         })
         cy.get('#btnAlert').as('btnClick')
+            .get('@btnClick').click()
+            .get('@btnClick').click()
+            .get('@btnClick').click()
+            .get('@btnClick').click()
             .get('@btnClick').click()
             // เพิ่มโค๊ดของคุณที่นี่
             .then(() => {

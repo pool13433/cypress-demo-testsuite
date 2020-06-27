@@ -5,11 +5,36 @@
 */
 
 describe('ฝึกการใช้งาน Selector DOM Element บนหน้าจอ', () => {
-  it('', () => {
+  it('selector by id', () => {
     cy.visit('/login.html')
     // เพิ่มโค๊ดของคุณที่นี่ ช่อง UserName
-    .get().type()
+    .get('#username').type('Cypress')
     // เพิ่มโค๊ดของคุณที่นี่ ช่อง Password
-    .get().type()
+    .get('#password').type('Automated')
+  })
+
+
+  it('selector by name', () => {
+    cy.visit('/login.html')
+    // เพิ่มโค๊ดของคุณที่นี่ ช่อง UserName
+    .get('[name="username"]').type('Cypress')
+    // เพิ่มโค๊ดของคุณที่นี่ ช่อง Password
+    .get('[name="password"]').type('Automated')
+  })
+
+  it('selector by tagName', () => {
+    cy.visit('/login.html')
+    // เพิ่มโค๊ดของคุณที่นี่ ช่อง UserName
+    .get('input:eq(0)').type('Cypress')
+    // เพิ่มโค๊ดของคุณที่นี่ ช่อง Password
+    .get('input:eq(1)').type('Automated')
+  })
+
+  it('selector by attrs by type = text', () => {
+    cy.visit('/login.html')
+    // เพิ่มโค๊ดของคุณที่นี่ ช่อง UserName
+    .get('[type="text"]:eq(0)').type('Cypress')
+    // เพิ่มโค๊ดของคุณที่นี่ ช่อง Password
+    .get('[type="text"]:eq(1)').type('Automated')
   })
 })

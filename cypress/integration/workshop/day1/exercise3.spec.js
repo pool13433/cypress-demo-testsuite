@@ -7,16 +7,26 @@
 describe('เขียน testscript capture screen หน้าจอ', () => {
     it('screencapture page /index.html', () => {
         cy.visit('/').screenshot('index-html')
+
+        cy.visit('/register.html').screenshot('register-html')
     });
-    it('screencapture page /register.html', () => {
+    //it('screencapture page /register.html', () => {
         // เพิ่ม screencapture page /register.html  ที่นี่
-    });
+        //cy.visit('/').screenshot('index-html')
+    //});
 
     // เพิ่ม it screencapture page อื่น ๆ  ที่นี่
 
     it('capture screen ส่วนของปุ่ม “Window Alert และ Window Confirm” เท่านั้น', () => {
         cy.visit('/window.html')
         // เพิ่มโค๊ดของคุณที่นี่
+        .get('[data-tab="first"].active')
+        //.not('[data-tab="first"].active #btnPromt')        
+        .screenshot('buttons-two',{
+          onBeforeScreenshot(){
+            Cypress.$('#btnPromt').hide()
+          }
+        })
     });
 
 });

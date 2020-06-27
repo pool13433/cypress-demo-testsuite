@@ -6,9 +6,12 @@ const SF_URL = 'https://www.sfcinemacity.com'
 describe('เขียน testscript จองตั๋วภาพยนต์ SF', () => {
   it('เข้า website SF เลือกภาพยนต์ที่ต้องการจอง', () => {
     // กำหนดวันที่ดูภาพยนต์เป็นวันพรุ้งนี้
-    const bookTargetDate = Cypress.moment().add(1, 'days').format('DD MMM YYYY')
+    const bookTargetDate = Cypress.moment()
+      //.add(1, 'days')
+      .format('DD MMM YYYY')
     // กำหนดเวลาดูภาพยนต์ 11:45
-    const bookTargetTime = '11:45'
+    //const bookTargetTime = '11:45'
+    const bookTargetTime = '16:40'
     // กำหนดชื่อภายนต์ที่จะดู
     //const movieTarget = 'Batman Begins'
     const movieTarget = 'Fantasy Island'    

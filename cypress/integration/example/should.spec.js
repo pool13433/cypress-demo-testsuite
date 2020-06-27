@@ -11,9 +11,9 @@ describe('ตัวอย่างโค๊ดการ ทดลองการ
         expect($covid).to.contain('USA')
         expect($covid).to.contain('Thailand')
       })
-      .get('@tableCovid').find('tr:nth-child(92)').as('trThailand')
+      .get('@tableCovid').find('tr:nth-child(95)').as('trThailand')
       .get('@trThailand').find('td:nth-child(1)').next().should('have.text', 'Thailand')
-      .get('@trThailand').find('td:eq(7)').should('have.text', '75')
+      .get('@trThailand').find('td:eq(7)').should('have.text', '51')
   })
   it('ค้นหา ตรวจสอบเคส ตามที่คาดหวัง', () => {
     cy.visit('/table.html')
@@ -21,7 +21,7 @@ describe('ตัวอย่างโค๊ดการ ทดลองการ
     cy.get('#covidState').contains('World')
     // ค้นหา Element ของ "Thailand" หาอันดับของ Thailand
     cy.get('#covidState').contains('Thailand').prev()
-      .should('have.text', '93')
+      .should('have.text', '95')
     // ค้นหา จำนวนประเทศทั้งหมดที่ติดเชื้อ Covid
     cy.get('#covidState>tbody>tr').not('tr:eq(0)').should('have.length', 215)
   });
