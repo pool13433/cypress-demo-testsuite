@@ -1,4 +1,4 @@
 {
-  "baseUrl" : "http://localhost:5500/demo",
+  "baseUrl" : "https://cypress-testing-143fd.web.app/",
   "chromeWebSecurity": false
 }

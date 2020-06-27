@@ -19,6 +19,12 @@ describe('เขียน testscript call RESTful API ของ Covid API ', () 
 
           //ตรวจสอบขนาดของ response content-type contains json
           //เพิ่มโค๊ดของคุณที่นี่
+
+          // ตรวจสอบจำนวนประเทศที่ติดเชื้อมากกว่า 100 ประเทศหรือไม่ (ใช้ greaterThan)
+
+          // ตรวจสอบ response body มีค่าหรือไม่ 
+
+          // ตรวจสอบมี property ที่ชื่อว่า country ของข้อมูล แถวแรก หรือไม่
       })
   });
 });
