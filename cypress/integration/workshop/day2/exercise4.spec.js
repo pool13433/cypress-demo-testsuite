@@ -7,13 +7,23 @@
 
 //เพิ่มโค๊ดของคุณที่นี่
 
+
+Cypress.Commands.add('customMethod2', () => {
+  cy.get(selector).contains(title)      
+})
+
+Cypress.Commands.add('customMethod2', () => {
+  cy.get(selector).contains(title)      
+})
+
+
 describe('เขียน testscript ใช้งาน Custom command', () => {
   it('ตรวจสอบข้อความ สำคัญ "Course Cypress Automated Testing @PTT" ก่อนการตรวจสอบเคสถัดไป', () => {      
-      cy.visit('/index.html')
-      //.shouldBeTitle('Course Cypress Automated Testing @PTT')
+      cy.visit('/index.html').shouldBeTitle('h2','ourse Cypress Autom')      
       
       // ตรวจสอบหน้า /register.html
       //เพิ่มโค๊ดของคุณที่นี่
+      cy.visit('/login.html').shouldBeTitle('h2','ourse Cypress Autom')      
 
       // ตรวจสอบหน้า /window.html
       //เพิ่มโค๊ดของคุณที่นี่

@@ -11,7 +11,8 @@ const person = {
   ],
   getName: () => {
     return "Poolsawat"
-  }
+  },
+  "aa bb" : "Test"
 }
 
 // https://github.com/chaijs/chai
@@ -34,7 +35,7 @@ describe('BDD Assertions Chaijs', () => {
     expect(false).to.be.false
     expect(null).to.be.null
     expect(undefined).to.be.undefined
-    expect(person['name']).to.exist
+    expect(person['aa bb']).to.exist
     expect([]).to.be.empty
     expect(arguments).to.be.arguments
 
@@ -165,6 +166,10 @@ describe('Chai-jQuery', () => {
         const $option0 = $el.find('#select option:eq(1)')
         expect($option0).not.to.be.selected
 
+        const $options = $el.find('#select option')
+        expect($options).to.have.lengthOf(5)
+        
+        cy.log('lengthOf------------')
         const $mazda = $el.find('[name="mazda-checked"]')
         expect($mazda).not.to.be.checked
 

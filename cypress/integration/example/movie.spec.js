@@ -18,7 +18,7 @@ describe('เขียน testscript จองตั๋วภาพยนต์ 
 
     cy.visit(SF_URL + '/movies/now-showing')
       // เปลี่ยนภาษา
-      .contains('ENG').click()
+      .contains('ENG',{timeout : 3000}).click()
       // ตรวจสอบ ค้นหาชื่อหนังที่ต้องการ จากนั้นกดเลือก
       .get('.movies-now-showing').contains(movieTarget, { timeout: 3000 }).get('[title="' + movieTarget + '"]').click()
       // ตรวจสอบวันที่จะจองหนัง
