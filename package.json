@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "xlsx": "^0.16.2"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "convert-excel-to-json": "^1.7.0",
